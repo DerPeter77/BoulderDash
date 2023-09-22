@@ -1,0 +1,57 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "boulderdashMap.tmx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "fileStates": {
+        "BoulderDash.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "boulderdashMap.tmx": {
+            "scale": 1.5,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 378.6666666666667,
+                "y": 294
+            }
+        },
+        "boulderdashMap.tmx#dirt": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "boulderdashMap.tmx#player": {
+            "scaleInDock": 1
+        },
+        "boulderdashMap.tmx#wall": {
+            "scaleInDock": 1
+        },
+        "dirt.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        }
+    },
+    "last.imagePath": "E:/DEV/1. PYTHON/Boulder Dash",
+    "map.height": 19,
+    "map.lastUsedFormat": "tmx",
+    "map.layerDataFormat": null,
+    "map.width": 25,
+    "openFiles": [
+        "boulderdashMap.tmx"
+    ],
+    "project": "boulderdashMap.tiled-project",
+    "property.type": "bool",
+    "recentFiles": [
+        "boulderdashMap.tmx",
+        "BoulderDash.tsx",
+        "dirt.tsx"
+    ],
+    "tileset.embedInMap": true,
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.type": 0
+}
