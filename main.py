@@ -32,6 +32,10 @@ earth_tile = Tile(earth_image, 0, 0)
 wall_image = pygame.image.load("wall.png")
 wall_tile = Tile(wall_image, 0, 0)
 
+# Rock-Tile
+rock_image = pygame.image.load("rock.png")
+rock_tile = Tile(rock_image, 0, 0)
+
 # Spieler
 player_image = pygame.image.load("player.png")
 player_rect = player_image.get_rect()
@@ -39,7 +43,7 @@ player_rect.topleft = (128, 64)  # Hier setzen wir die Startposition oben links
 
 # Zeitmessung für die Bewegung
 last_move_time = time.time()
-move_cooldown = 0.1  # Bewegung alle 100 ms
+move_cooldown = 0.2  # Bewegung alle 100 ms
 
 # Funktion zum Entfernen der Erde aus der Tilemap
 def remove_earth(tilemap, x, y, layer_index):
