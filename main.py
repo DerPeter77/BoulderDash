@@ -3,11 +3,15 @@ import pytmx
 import time
 import customtkinter
 
+
 def startGame():
     global score
     score = 0
     # Initialisieren von Pygame
     pygame.init()
+
+    # music abspielen
+    #pygame.mixer.music.load('BoulderDashThemeSong.mp3')
 
     # Konstanten für das Spiel
     WIDTH, HEIGHT = 800, 608
@@ -87,6 +91,12 @@ def startGame():
                         if new_player_rect.colliderect(tile_rect):
                             collision = True
                             break
+                elif layer.name == "rock":
+                    for x, y, tile_image in layer.tiles():
+                        tile_rect = pygame.Rect(x * GRID_SIZE, y * GRID_SIZE, GRID_SIZE, GRID_SIZE)
+                        if new_player_rect.colliderect(tile_rect):
+                            collision = True
+                            break
 
             if not collision:
                 # Überprüfen, ob der Spieler auf Erde steht
@@ -132,10 +142,13 @@ def startGame():
 #    score = score - 1
 #    scoreBox.insert("0.0", "Punktestand: " + str(score))
 
+favicon = "BD-logo.ico"
+
 app = customtkinter.CTk()
 app.title("BoulderDash Launcher")
 app.geometry("400x350")
 customtkinter.set_appearance_mode("dark")
+app.iconbitmap(favicon)
 
 app.grid_columnconfigure(0, weight=1)
 app.grid_columnconfigure(1, weight=1)
@@ -152,8 +165,9 @@ button = customtkinter.CTkButton(app, text="Start Game", command=startGame)
 button.grid(row=2, column=2, padx=20, pady=20)
 
 scoreBox = customtkinter.CTkTextbox(app)
-scoreBox.insert("0.0", "Drücke auf Start Game um das Spiel zu starten!")#"Punktestand: 0") # + str(score))
+scoreBox.insert("0.0", "Drücke auf Start Game um das Spiel zu starten!") #"Punktestand: 0") # + str(score))
 scoreBox.grid(row=1, column=2, padx=20, pady=20)
+
 
 #scoreup = customtkinter.CTkButton(app, text="Score up", command=scoreUP)
 #scoreup.grid(row=1, column=3, padx=20, pady=20)
